@@ -1,0 +1,60 @@
+base_archetype: landing_zones
+name: landing_zones_custom
+policy_assignments_to_add: []
+policy_assignments_to_remove: [
+# To remove AMA policies, uncomment the following lines:
+  Deploy-MDFC-DefSQL-AMA,
+  Deploy-VM-ChangeTrack,
+  Deploy-VM-Monitoring,
+  Deploy-vmArc-ChangeTrack,
+  Deploy-vmHybr-Monitoring,
+  Deploy-VMSS-ChangeTrack,
+  Deploy-VMSS-Monitoring,
+# To remove the DDOS modify policy, uncomment the following line:
+  Enable-DDoS-VNET,  
+  Enforce-ASR,
+  Deploy-VM-Backup,
+  Deny-IP-forwarding,
+  Deny-MgmtPorts-Internet, #added at root level in audit mode.
+
+  #workload specific
+Enforce-Encrypt-CMK0,
+Enforce-GR-APIM0,
+Enforce-GR-AppServices0,
+Enforce-GR-Automation0,
+Enforce-GR-BotService0,
+Enforce-GR-CogServ0,
+Enforce-GR-Compute0,
+Enforce-GR-ContApps0,
+Enforce-GR-ContInst0,
+Enforce-GR-ContReg0,
+Enforce-GR-CosmosDb0,
+Enforce-GR-DataExpl0,
+Enforce-GR-DataFactory0,
+Enforce-GR-EventGrid0,
+Enforce-GR-EventHub0,
+Enforce-GR-KeyVault,
+Enforce-GR-KeyVaultSup0,
+Enforce-GR-Kubernetes0,
+Enforce-GR-MachLearn0,
+Enforce-GR-MySQL0,
+Enforce-GR-Network0,
+Enforce-GR-OpenAI0,
+Enforce-GR-PostgreSQL0,
+Enforce-GR-SQL0,
+Enforce-GR-ServiceBus0,
+Enforce-GR-Storage0,
+Enforce-GR-Synapse0,
+Enforce-GR-VirtualDesk0,
+Deny-Privileged-AKS,
+Deny-Priv-Esc-AKS,
+Enforce-AKS-HTTPS,
+
+
+]
+policy_definitions_to_add: []
+policy_definitions_to_remove: []
+policy_set_definitions_to_add: []
+policy_set_definitions_to_remove: []
+role_definitions_to_add: []
+role_definitions_to_remove: []
