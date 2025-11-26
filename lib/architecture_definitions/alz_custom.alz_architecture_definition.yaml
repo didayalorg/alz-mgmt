@@ -1,0 +1,38 @@
+name: alz_custom
+management_groups:
+  - id: HAL-Master
+    display_name: HAL-Master
+    exists: true
+    parent_id: null
+
+  - id: HAL-Cloud
+    display_name: HAL-Cloud
+    archetypes:
+     - root_custom 
+    exists: false
+    parent_id: HAL-Master
+
+  - id: HAL-Prod
+    display_name: HAL-Prod
+    archetypes:
+    - landing_zones_custom 
+    #- amba_landing_zones_custom
+    exists: false
+    parent_id: HAL-Cloud
+  
+  - id: HAL-NonProd-MG
+    display_name: HAL-NonProd
+    archetypes:
+      - landing_zones_custom 
+    exists: false
+    parent_id: HAL-Cloud
+
+  - id: HAL-ALZ-Platform
+    display_name: HAL-ALZ-Platform
+    archetypes:
+      - platform_custom 
+      - management_custom
+      - identity_custom
+      - security_custom
+    exists: false
+    parent_id: HAL-Cloud
