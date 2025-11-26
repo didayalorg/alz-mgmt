@@ -1,0 +1,38 @@
+base_archetype: root
+name: root_custom
+policy_assignments_to_add: [
+  Deny-MgmtPorts-Internet #modified to be audit in tfvars.
+]
+policy_assignments_to_remove: [
+  Audit-TrustedLaunch,
+  Enforce-ASR,
+  Deploy-Private-DNS-Zones
+  
+]
+policy_definitions_to_add: [
+]
+policy_definitions_to_remove: [
+]
+policy_set_definitions_to_add: []
+policy_set_definitions_to_remove: []
+role_definitions_to_add: []
+role_definitions_to_remove: []
+
+
+# Audit-ResourceRGLocation
+# Audit-TrustedLaunch
+# Audit-UnusedResources
+# Audit-ZoneResiliency
+# Deny-Classic-Resources
+# Deny-UnmanagedDisk
+# Deploy-ASC-Monitoring
+# Deploy-AzActivity-Log
+# Deploy-Diag-LogsCat
+# Deploy-MDEndpoints
+# Deploy-MDEndpointsAMA
+# Deploy-MDFC-Config-H224
+# Deploy-MDFC-OssDb
+# Deploy-MDFC-SqlAtp
+# Deploy-SvcHealth-BuiltIn
+# Enforce-ACSB
+##
