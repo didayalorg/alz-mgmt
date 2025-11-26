@@ -25,6 +25,10 @@ provider "alz" {
   library_overwrite_enabled = true
   library_references = [
     {
+      path = "platform/amba"
+      ref  = "2025.11.0" # check the latest library version https://github.com/Azure/Azure-Landing-Zones-Library/tags
+    },
+    {
       custom_url = "${path.root}/lib"
     }
   ]
@@ -71,3 +75,5 @@ provider "azapi" {
   skip_provider_registration = true
   subscription_id            = try(var.subscription_ids["connectivity"], var.subscription_id_connectivity)
 }
+
+

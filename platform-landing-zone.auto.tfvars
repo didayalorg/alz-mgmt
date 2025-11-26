@@ -218,7 +218,7 @@ management_group_settings = {
         }
       }
     }
-    
+
     # connectivity = {
     #   policy_assignments = {
     #     Enable-DDoS-VNET = {
